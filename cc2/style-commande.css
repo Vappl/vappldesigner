@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+body{
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #141414;
+    padding: 0;
+    margin:0;
+    color: white;
+}
+body .page{
+    margin: 20px 80px;
+}
+/*Barre de navigation*/
+nav{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: #141414;
+    padding: 10px 0px;
+}
+nav .onglets{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+nav .onglets a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+nav .buttons button{
+    padding: 13px 20px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+nav .buttons .login{
+    background-color: inherit;
+    margin-right: 10px;
+    color: #8F8F8F;
+}
+nav .buttons .register{
+    background-color: #ff0000;
+    margin-right: 10px;
+    color: white;
+}
+/*Fin de la Barre de navigation*/
+
+/*Partie Header*/
+header{
+    margin-top: 40px;
+    background-image:url('images/background.png');
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 1920px 1080px;
+}
+header h1{
+    text-align:right;
+    font-size: 37px;
+    padding: 350px;
+}
+
+nav .bouton .commander{
+    border: 0;
+    background: transparent;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.5em;
+    box-shadow: 0px -0px 0px 0px rgba(248, 64, 64, 0.5), 0px 0px 0px 0px rgba(255, 166, 0, .5);
+    transition: all .2s;
+}
+nav .bouton .commander::after{
+    content: "";
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(225deg, #ff0000 0%, #ff9d00 50%, #ffc400 100%);
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    z-index: -1;
+    transition: all .5s;
+}
+
+nav .bouton .commander:hover::after{
+    transform: rotate(150deg);
+}
+
+nav .bouton .commander:hover{
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0px rgba(248, 64, 64, 0.25), -10px 10px 25px 0px rgba(255, 166, 0, 0.25);
+}
+
+/*Fin de la Partie Header*/
+
+/*Pied de page*/
+footer{
+    background-color: #1A1A1A;
+    padding: 25px 100px;
+    color: #828282;
+}
+footer .colonnes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/*Fin du Pied de page*/
+
+@media screen and (max-width: 640px){
+    body .page{
+        margin: 10px;
+    }
+    nav .onglets{
+        display: none;
+    }
+    header{
+        margin-top: 20px;
+        background-size: 1080px 650px;
+        padding: 1080px;
+    }
+    header h1{
+        font-size: 30px;
+        margin: 100px;
+    }
+}
